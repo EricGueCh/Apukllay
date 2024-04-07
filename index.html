@@ -4,32 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apukllay - Agencia de Viajes</title>
+    <!-- <link href="https://fonts.cdnfonts.com/css/blanquotey" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/img/Apukllay_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="/style/style.css">
     <script src="https://kit.fontawesome.com/228ed70c18.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="logo">
-                <a href="index.html">
+        <div class="min-header">
+            <div class="info-min">
+                <div class="min-contacto">
+                    <h4>Reservaciones:</h4>
+                    <a href="">
+                        <i class="fa fa-brands fa-whatsapp"></i> +51 944 833 058
+                    </a>
+                </div>
+                <div class="min-redsocial">
+                    <a href=""><i class="fa fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="principal-header">
+            <div class="logo">
+                <a href="/index.html">
                     <img src="/img/Apukllay-logo-RGB-5-.png" alt="Apukllay">
                 </a>
+            </div>
+            
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-solid fa-bars"></i>
+            </label>
+            
+            <div class="navbar">
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/pages/about-us.html">Sobre nosotros</a></li>
+                    <li><a href="">Destinos</a></li>
+                    <li><a href="">Paquetes</a></li>
+                    <li><a href="">Contactenos</a></li>
+                </ul>
+            </div> 
         </div>
-            
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa fa-solid fa-bars"></i>
-        </label>
-            
-        <div class="navbar">
-            <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Sobre nosotros</a></li>
-                <li><a href="">Destinos</a></li>
-                <li><a href="">Paquetes</a></li>
-                <li><a href="">Contactenos</a></li>
-            </ul>
-        </div>   
+          
     </header>
     <main>
         <section class="section-banner">
@@ -76,9 +100,42 @@
             </div>
         </section>
         <section class="section-engagement">
-            <h1 class="tittle-engagement">NUESTROS PRINCIPALES VALORES</h1>
+            <h1 class="tittle-engagement">Favoritos</h1>
             <div class="container-engagement">
-                <div class="img-engagement">
+                <h2>Destinos favoritos</h2>
+                <div class="cards-fav">
+                    <div class="card-fav-destiny" style="background-image: url('/img/favorites/tour_aqp.jpg');">
+                        <div class="card-fav-content">
+                            <span>Tour</span>
+                            <h3>Arequipa</h3>
+                        </div>
+                    </div>
+                    <div class="card-fav-destiny" style="background-image: url('/img/slide/imagen-1.jpg');">
+                        <div class="card-fav-content">
+                            <span>Tour</span>
+                            <h3>Cusco</h3>
+                        </div>
+                    </div>
+                    <div class="card-fav-destiny" style="background-image: url('/img/favorites/tour_puno.jpg');">
+                        <div class="card-fav-content">
+                            <span>Tour</span>
+                            <h3>Puno</h3>
+                        </div>
+                    </div>
+                    <!-- <div class="card-fav-destiny">
+                        <div class="card-fav-content">
+                            <span>Tour</span>
+                            <h3>Arequipa</h3>
+                        </div>
+                    </div>
+                    <div class="card-fav-destiny">
+                        <div class="card-fav-content">
+                            <span>Tour</span>
+                            <h3>Arequipa</h3>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="img-engagement">
                     <img src="/img/promise/Artboard-8.png" alt="">
                 </div>
                 <div class="text-engagement">
@@ -86,11 +143,12 @@
                     <p>Estamos comprometidos con la práctica de un turismo responsable y trabajamos en la mejora continua en materia social y ambiental de nuestros viajes. Con ello perseguimos el objetivo de ofrecerles productos que no sólo respeten, si no que dejen un impacto positivo en la población local, el patrimonio cultural y el medio ambiente donde desarrollamos nuestra actividad.</p>
                     <h3>Responsabilidad</h3>
                     <p>Todavía queda mucho camino que recorrer juntos, pero estamos comprometidos en una mejora continua para desarrollar nuestra actividad bajo los principios de la sostenibilidad en todas sus dimensiones, fomentando la concienciación y la adopción de un comportamiento responsable entre nuestros clientes, proveedores y trabajadores.</p>
-                </div>
+                </div> -->
             </div>
         </section>
         <section class="section-statistics">
-            <h1 class="tittle-statistics">NUESTROS INDICADORES</h1>
+            <h1 class="tittle-statistics">Métricas</h1>
+            <h2 class="subtittle-statistics">Nuestros indicadores</h2>
             <div class="cards">
                 <div class="card-stat">
                     <img src="/img/icons/turista_696969.png">
@@ -115,7 +173,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="footer-principal">
             <div class="logo-footer">
@@ -152,11 +209,11 @@
                     <ul>
                         <li>
                             <i class="fa fa-solid fa-tag"></i>
-                            <span>Calle San Pedro N°139</span>
+                            <span>Urb. Carlos Baca Flor. <br>Arequipa-Arequipa-Cerro Colorado</span>
                         </li>
                         <li>
                             <i class="fa fa-solid fa-phone"></i>
-                            <span>992236543 - 992236544</span>
+                            <span>+51 944 833 058</span>
                         </li>
                         <li>
                             <i class="fa fa-solid fa-envelope"></i>
@@ -167,7 +224,7 @@
             </div>
         </div>
         <div class="footer-secundary">
-
+            <span>&copy; Apukllay. Todos los derechos reservados</span>
         </div>
     </footer>
     <script type="text/javascript">

@@ -4,7 +4,11 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Blanquotey', sans-serif; */
+    font-family: "Kumbh Sans", sans-serif;
+    /* font-optical-sizing: auto; */
+    /* font-style: normal; */
+    /* font-variation-settings:"YOPQ" 300; */
 }
 /* Configuración de Navbar */
 header{
@@ -19,45 +23,88 @@ header{
     display: block;
     /* border: 1px solid black; */
 }
+/* Configuración de la barra superior de navbar */
+.min-header{
+    height: 30px;
+    width: 100%;
+    background-color: #1198ac;
+    /* position: absolute; */
+    /* border: 1px solid black; */
+}
+.info-min{
+    width: 80%;
+    margin: 0 auto;
+}
+.info-min .min-contacto{
+    /* display: flex; */
+    float: left;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.info-min .min-contacto h4, .info-min .min-contacto a{
+    float: left;
+    color: white;
+    margin: 0 5px;
+}
+.info-min .min-contacto a i:hover{
+    scale: 1.2px;
+    color:white;
+    background-color: transparent;
+}
+.info-min .min-redsocial{
+    float: right;
+    line-height: 30px;
+}
+.info-min .min-redsocial a {
+    color: white;
+    margin: 0 10px;
+}
+.info-min .min-redsocial a i:hover{
+    scale: 1.2px;
+    color:white;
+    background-color: transparent;
+}
+/* Configuración de barra principal del navbar */
 
+.principal-header{
+    height: 90px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
 .logo{
-    margin: 5px 10px 5px 10%;
+    height: 90px;
+    margin: 0px 10px 0px 10%;
     float: left;
     /* border: 1px solid black; */
 }
-
 .logo a img{
-    height: 100px;
+    height: 80px;
     width: auto;
+    line-height: 90px;
 }
-.navbar{
-    margin: 5px 10% 5px 10px;
-    /* padding: 10px 20px; */
-    /* border: 1px solid black; */
+.principal-header .navbar{
+    float: right;
+    height: 90px;
+    margin: 0px 10% 0px 10px;
 }
 .navbar ul{
-    float: right;
-    
-}
-
-.navbar ul li{
-    display: inline-block;
-    line-height: 100px;
-}
-
-.navbar ul li a{
-    list-style: none;
-    color: black;
-    padding: 15px 22px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
+    height: 90px;
     /* border: 1px solid black; */
 }
-
-.navbar ul li a:hover{
-    background-color: rgb(203, 202, 202)
+.navbar ul li{
+    float: left;
+    line-height: 90px;
 }
+.navbar ul li a{
+    color: black;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.principal-header .navbar ul li a:hover{
+    background-color: rgb(203, 202, 202)
+} 
 
 .checkbtn{
     /* border: 1px solid black; */
@@ -79,21 +126,23 @@ main .section-banner{
     margin-top: 120px;
     padding: 0;
     height: auto;
-    display: block;
+    display: flex;
     position: relative;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    background-image: url(/img/slide/Apukllay-logo-RGB-10.png);
+    background-size: 148px 148px;
+    background-repeat: repeat;
+    /* align-items: center; */
 }
 .slider{
-    width: 100%;
-    height: 580px;
+    width: 75%;
+    height: 450px;
     /* border-radius: 10px; */
     overflow: hidden;
-    
 }
 .slide{
     width: 500%;
-    height: 580px;
+    height: 450px;
     display: flex;
 }
 .slide input{
@@ -105,18 +154,18 @@ main .section-banner{
 }
 .st img{
     width: 100%;
-    height: 580px;
+    height: 450px;
 }
 .nav-m{
     position: absolute;
-    width: 100%;
+    width: 75%;
     margin-top: -40px;
     justify-content: center;
     display: flex;
 }
 .m-btn{
     border: 2px solid rgb(208, 208, 208);
-    padding: 5px;
+    padding: 3px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
@@ -141,14 +190,14 @@ main .section-banner{
 }
 .nav-auto{
     position: absolute;
-    width: 100%;
-    margin-top: 540px;
+    width: 75%;
+    margin-top: 410px;
     display: flex;
     justify-content: center;
 }
 .nav-auto div{
     border: 2px solid rgb(208, 208, 208);
-    padding: 5px;
+    padding: 3px;
     border-radius: 10px;
     transition: 1s;
 }
@@ -177,6 +226,7 @@ main .section-banner{
     position:absolute;
     /* z-index: 10; */
     /* border: 1px solid black; */
+    display: none;
 }
 .info-float{
     width: 100%;
@@ -206,40 +256,43 @@ main .section-banner{
 /* Sección Nuestro Compromiso */
 .section-engagement{
     width: 100%;
-    height: 750px;
+    height: auto;
     /* border: 1px solid black; */
 }
 .tittle-engagement{
     height: auto;
-    width: 500px;
-    margin: 50px auto;
-    padding: 15px 15px;
+    width: 160px;
+    margin: 40px auto;
+    padding: 10px 15px;
     text-align: center;
     /* border: 1px solid black; */
-    background-color:rgb(183, 183, 183);
-    color: black;
-    border-radius: 15px;
-    font-size: 23px;
-    letter-spacing: 1.3px;
+    background-color:#bee1e7;
+    color: #1198ac;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 .container-engagement{
-    width: 80%;
-    height: 550px;
+    width: 90%;
+    height: auto;
     /* border: 1px solid black; */
     margin: 0 auto;
 }
-.img-engagement img{
+.container-engagement h2{
+     text-align: center;
+     font-size: 48px;
+     letter-spacing: -0.6px;
+}
+/* .img-engagement img{
     width: 40%;
     height: 500px;
     margin: 10px 1% 0 1%;
-    /* border: 1px solid black; */
     float: left;
     border-radius: 100px 0;
-    /* box-shadow: 0px 2px 10px; */
     object-fit: cover;
-}
-
-.text-engagement{
+} */
+/* .text-engagement{
     width: 56%;
     height: 500px;
     margin: 10px 1% 0 1%;
@@ -247,37 +300,82 @@ main .section-banner{
     font-size: 23px;
     justify-content:center;
     text-align: justify;
-    /* border: 1px solid black; */
     float: right;
-}
+} */
 
+.cards-fav{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 20px auto 40px auto;
+    display: grid;
+    grid-template-columns:auto auto auto;
+    /* text-align: justify; */
+}
+.card-fav-destiny{
+    /* width:30%;
+    height: 300px; */
+    /* border: 1px solid black; */
+    height: 230px;
+    position: relative;
+    /* background-image: url(/img/slide/imagen-1.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+.card-fav-destiny:hover{
+    transition: .5s;
+    scale: 1.1;
+}
+.card-fav-content{
+    /* border: 1px solid black; */
+    background-color: rgba(17, 151, 172, 0.839);
+    position: absolute;
+    width: 50%;
+    border-radius: 0 15px 15px 0;
+    padding: 3px 0 3px 20px;
+    bottom: 20px;
+}
+.card-fav-destiny span, .card-fav-destiny h3{
+    color: white;
+    font-weight: bold;
+}
 /* Sección de estadistica */
 .section-statistics{
     width: 100%;
-    height: 500px;
+    height: auto;
     padding: 50px 0;
     /* border: 1px solid black; */
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(236, 236, 236);
     /* color: rgb(83, 83, 83); */
-    
 }
 .tittle-statistics{
     height: auto;
-    width: 400px;
-    margin: 0 auto 50px;
-    padding: 15px 15px;
+    width: 160px;
+    margin: 20px auto;
+    padding: 10px 15px;
     text-align: center;
     /* border: 1px solid black; */
-    background-color:white;
-    color: black;
-    border-radius: 15px;
-    font-size: 23px;
-    letter-spacing: 1.3px;
+    background-color:#bee1e7;
+    color: #1198ac;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.subtittle-statistics{
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: -0.6px;
 }
 .cards{
     width: 100%;
-    height: 280px;
-    display: inline-flex;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     /* border: 1px solid black; */
@@ -305,16 +403,17 @@ main .section-banner{
 /* Configuracion de footer */
 
 footer{
-    height: 600px;
+    height: auto;
     width: 100%;
-    /* border: 1px solid black; */
+    /* border: 1px solid yellow; */
 }
 .footer-principal{
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: rgb(56, 56, 56);
     /* border: 1px solid red; */
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
 }
 .logo-footer, .contact, .metod-pay, .tours-recommended{
     /* border: 1px solid white; */
@@ -326,8 +425,8 @@ footer{
     text-align: center;
 }
 .logo-footer a img{
-    margin: 10px 0 5px 0;
-    height: 320px;
+    margin: 30px 0 5px 0;
+    height: 280px;
     /* border: 1px solid white; */
 }
 .red-social{
@@ -337,12 +436,12 @@ footer{
     line-height: 100px;
 }
 .red-social i{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     background-color: rgb(135, 135, 135);
-    margin: auto 3px;
-    line-height: 60px;
-    font-size: 35px;
+    margin: auto 2px;
+    line-height: 40px;
+    font-size: 25px;
     border-radius: 50%;
     color: white;
     cursor: pointer;
@@ -360,11 +459,11 @@ footer{
 } 
 .tours-recommended ul{
     text-align: justify;
-    margin-left: 100px;
+    margin-left: 15%;
     line-height: 55px;
 } 
 .tours-recommended ul li a{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
     color: white;
 } 
@@ -399,12 +498,12 @@ footer{
 }
 .info-contact ul{
     margin-top: 20px;
-    margin-left: 70px;
+    margin-left: 10%;
     line-height: 55px;
 }
 .info-contact ul li{
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 15px;
+    letter-spacing: -0.2px;
     color: white;
 }
 .info-contact ul li i{
@@ -412,73 +511,75 @@ footer{
 }
 .footer-secundary{
     width: 100%;
-    height: 100px;
-    background-color: rgb(93, 1, 1);
+    height: 50px;
+    background-color: #1198ac;
+    text-align: center;
     /* border: 1px solid green; */
+}
+.footer-secundary span{
+    color: white;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 50px;
 }
 
 /* Configuracion Responsive */
 @media (min-width:1200px){
     
     /* Ajuste de slide */
-    .slider, .slide, .st img{
+    /* .slider, .slide, .st img{
         height: 780px;
     }
     .nav-auto{
         margin-top: 740px;
-    }
+    } */
 }
 @media (min-width:992px) and (max-width: 1199px){
-    /* Ajuste de Navbar */
-    .logo{
-        margin: 5px 5px 5px 5%;
-    }
-    .navbar{
-        margin: 5px 5% 5px 5px;
-    }
-    .navbar ul li a{
-        padding: 15px 20px;
-        font-size: 18px;
 
-    }
 }
 
 @media (min-width:768px) and (max-width: 991px) {
     /* Ajuste de Navbar */
-    .logo{
-        margin: 5px 3px 5px 3%;
-    }
-    .navbar{
-        margin: 5px 3% 5px 3px;
-    }
     .navbar ul li a{
-        padding: 15px 10px;
-        font-size: 16px;
+        color: black;
+        padding: 10px 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
     }
     /* Ajuste de slide */
     .slider, .slide, .st img{
-        height: 480px;
+        height: 420px;
     }
     .nav-auto{
-    margin-top: 440px;
+    margin-top: 380px;
+    }
+    /* Ajuste de footer */
+    .logo-footer, .contact, .metod-pay, .tours-recommended{
+        width: 50%;
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width:576px) and (max-width: 767px) {
     /* Ajuste de Navbar */
-    .logo{
-        margin: 5px 10px 5px 15%;
+    .info-min{
+        width: 95%;
+    }
+    .info-min .min-contacto h4{
+        display: none;
+    }
+    .info-min .min-redsocial a {
+        margin: 0 5px;
     }
     .checkbtn{
         display: block;
         font-size: 40px;
     }
-
     .navbar ul li{
         position:relative;
         border: 1px solid white;
         line-height: 80px;
-        top: 5px;
+        top: -21px;
         width: 100%;
         height: 13vh;
         left: -115%;
@@ -491,8 +592,8 @@ footer{
         color: white;
     }
     .navbar ul li a:hover{
-        background-color: transparent;
-        color: rgb(54, 249, 74);
+        background-color: #2c3e50; 
+        color: #2c3e50;
     }
     
     #check:checked ~ .navbar ul li{
@@ -500,9 +601,78 @@ footer{
     }
     /* Ajuste de slide */
     .slider, .slide, .st img{
-        height: 300px;
+        height: 330px;
     }
     .nav-auto{
-    margin-top: 260px;
+    margin-top: 290px;
+    }
+    .slider, .nav-m, .nav-auto{
+        width: 95%;
+    }
+    /* Ajuste de Favoritos */
+    .cards-fav{
+        grid-template-columns:auto auto;
+    }
+    /* Ajuste de footer */
+    .logo-footer, .contact, .metod-pay, .tours-recommended{
+        width: 50%;
+    }
+}
+@media (max-width: 575px) {
+    /* Ajuste de Navbar */
+    .info-min{
+        width: 95%;
+    }
+    .info-min .min-contacto h4{
+        display: none;
+    }
+    .info-min .min-redsocial a {
+        margin: 0 5px;
+    }
+    .checkbtn{
+        display: block;
+        font-size: 40px;
+    }
+    .navbar ul li{
+        position:relative;
+        border: 1px solid white;
+        line-height: 80px;
+        top: -21px;
+        width: 100%;
+        height: 13vh;
+        left: -115%;
+        background-color: #2c3e50;
+        text-align: center;
+        transition: all .5s;
+    }
+    .navbar ul li a{
+        padding: 15px 80px;
+        color: white;
+    }
+    .navbar ul li a:hover{
+        background-color: #2c3e50; 
+        color: #2c3e50;
+    }
+    
+    #check:checked ~ .navbar ul li{
+        left: 0;
+    }
+    /* Ajuste de slide */
+    .slider, .slide, .st img{
+        height: 250px;
+    }
+    .nav-auto{
+    margin-top: 210px;
+    }
+    .slider, .nav-m, .nav-auto{
+        width: 95%;
+    }
+   /* Ajuste de Favoritos */
+   .cards-fav{
+    grid-template-columns:auto;
+    }
+    /* Ajuste de footer */
+    .logo-footer, .contact, .metod-pay, .tours-recommended{
+        width: 100%;
     }
 }
