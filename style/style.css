@@ -129,10 +129,16 @@ main .section-banner{
     display: flex;
     position: relative;
     justify-content: center;
-    background-image: url(/img/slide/Apukllay-logo-RGB-10.png);
+    background-color: rgb(17, 151, 172);
+    /* background-image: url(/img/slide/Apukllay-logo-RGB-10.png);
     background-size: 148px 148px;
-    background-repeat: repeat;
+    background-repeat: repeat; */
     /* align-items: center; */
+}
+iframe{
+    width: 75%;
+    height: 480px;
+    border: none;
 }
 .slider{
     width: 75%;
@@ -253,7 +259,7 @@ main .section-banner{
     letter-spacing: 1.2px;
 }
 
-/* Sección Nuestro Compromiso */
+/* Sección Destinos Favoritos */
 .section-engagement{
     width: 100%;
     height: auto;
@@ -316,14 +322,22 @@ main .section-banner{
     /* width:30%;
     height: 300px; */
     /* border: 1px solid black; */
-    height: 230px;
-    position: relative;
+    height: auto;
+    /* position: relative; */
     /* background-image: url(/img/slide/imagen-1.jpg); */
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: rgba(17, 151, 172, 0.856);
+    box-shadow: 0 0 5px gray;
     border-radius: 20px;
     margin: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
+    display: block;
+}
+.card-fav-destiny img{
+    height: 250px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
 .card-fav-destiny:hover{
     transition: .5s;
@@ -331,17 +345,188 @@ main .section-banner{
 }
 .card-fav-content{
     /* border: 1px solid black; */
-    background-color: rgba(17, 151, 172, 0.839);
-    position: absolute;
-    width: 50%;
-    border-radius: 0 15px 15px 0;
-    padding: 3px 0 3px 20px;
+    /* background-color: rgba(17, 151, 172, 0.839); */
+    /* background-color: rgba(233, 233, 233, 0.839); */
+    display: inline-grid;
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+    /* border-radius: 0 15px 15px 0; */
+    /* padding: 3px 0 3px 0px; */
     bottom: 20px;
 }
-.card-fav-destiny span, .card-fav-destiny h3{
+.fav-destiny{
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 15px;
+}
+.card-fav-ubication, .card-fav-price{
     color: white;
     font-weight: bold;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-bottom: 15px;
 }
+.card-fav-ubication i, .card-fav-price i{
+    color: #F6E127;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.card-fav-ubication i:hover, .card-fav-price i:hover{
+    color: #F6E127;
+    background-color: transparent;
+    scale: none;
+}
+.boton-modal{
+    /* .card-fav-content a, --En caso de usar otra opcion de modal usar el boton <a> */
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 60%;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #ED2A79;
+    cursor: pointer;
+    /* colores: Rosado:#ED2A79 Verde:#3ABA8F Amarillo:#F6E127 Azul:#06809F*/
+}
+.boton-modal:hover{
+    /* .card-fav-content a:hover, --En caso de usar otra opcion de modal usar el boton <a> */
+    background-color: #F6E127;
+    color: #06809F;
+}
+.boton-modal i{
+    /* .card-fav-content a i, --En caso de usar otra opcion de modal usar el boton <a> */
+    margin-right: 5px;
+}
+.boton-modal i:hover{
+    /* .card-fav-content a i:hover, --En caso de usar otra opcion de modal usar el boton <a> */
+    color: #06809F;
+    background-color: transparent;
+    scale: none;
+}
+/* Configuracion de Modal */
+#btn-modal-1,#btn-modal-2,#btn-modal-3,#btn-modal-4,#btn-modal-5,#btn-modal-6{
+    display: none;
+}
+.container-modal-1,.container-modal-2,.container-modal-3,.container-modal-4,.container-modal-5,.container-modal-6{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items:start;
+    text-align: justify;
+    z-index: 100;
+    overflow-y: auto;
+}
+#btn-modal-1:checked ~ .container-modal-1{
+    display: flex;
+}
+#btn-modal-2:checked ~ .container-modal-2{
+    display: flex;
+}
+#btn-modal-3:checked ~ .container-modal-3{
+    display: flex;
+}
+#btn-modal-4:checked ~ .container-modal-4{
+    display: flex;
+}
+#btn-modal-5:checked ~ .container-modal-5{
+    display: flex;
+}
+#btn-modal-6:checked ~ .container-modal-6{
+    display: flex;
+}
+.content-modal{
+    width: 100%;
+    max-width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.detail-row-1{
+    display: grid;
+    grid-template-columns:auto auto;
+    border-bottom: 1px solid #dbdbdb;
+}
+.content-modal h2{
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 15px 0px;
+}
+.detail-tour{
+    font-size: 16px;
+    padding: 15px 0px;
+    margin-right: 10px;
+}
+.detail-important{
+    border-bottom: 1px solid #dbdbdb;
+    padding: 15px 0px;
+}
+.detail-img{
+    /* border: 1px solid black; */
+    padding: 15px 0px;
+    align-items: center;
+    display: grid;
+    grid-template-rows:auto auto;
+}
+.detail-img img{
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+}
+.detail-include{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 14px;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 15px 0px;
+    text-align: left;
+}
+.detail-include .include ul li, .detail-include .non-include ul li{
+    list-style:outside; 
+    margin: 0 20px;   /* font-size: 14px; */
+}
+.content-modal .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal .btn-cerrar label{
+    padding: 7px 10px;
+    background-color: #ED2A79;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.content-modal .btn-cerrar label:hover{
+    background-color: #F6E127;
+    color: #06809F;
+}
+.cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+/*:::Fin Ventana Modal:::*/
 /* Sección de estadistica */
 .section-statistics{
     width: 100%;
@@ -558,6 +743,13 @@ footer{
     .logo-footer, .contact, .metod-pay, .tours-recommended{
         width: 50%;
     }
+    /* Ajuste de Modal */
+    .detail-row-1{
+        grid-template-columns:auto;
+    }
+    .detail-tour, .detail-important{
+        font-size: 14px;
+    }
 }
 
 @media (min-width:576px) and (max-width: 767px) {
@@ -617,6 +809,19 @@ footer{
     .logo-footer, .contact, .metod-pay, .tours-recommended{
         width: 50%;
     }
+    /* Ajuste de Modal */
+    .detail-row-1{
+        grid-template-columns:auto;
+    }
+    .detail-tour, .detail-important, .detail-include{
+        font-size: 13px;
+    }
+    .detail-include{
+        grid-template-columns: auto;
+    }
+    .detail-include .include{
+        margin-bottom: 10px;
+    }
 }
 @media (max-width: 575px) {
     /* Ajuste de Navbar */
@@ -674,5 +879,18 @@ footer{
     /* Ajuste de footer */
     .logo-footer, .contact, .metod-pay, .tours-recommended{
         width: 100%;
+    }
+    /* Ajuste de Modal */
+    .detail-row-1{
+        grid-template-columns:auto;
+    }
+    .detail-tour, .detail-important, .detail-include{
+        font-size: 13px;
+    }
+    .detail-include{
+        grid-template-columns: auto;
+    }
+    .detail-include .include{
+        margin-bottom: 10px;
     }
 }
