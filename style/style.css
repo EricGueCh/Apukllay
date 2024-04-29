@@ -881,6 +881,9 @@ footer{
         width: 100%;
     }
     /* Ajuste de Modal */
+    .content-modal{
+        max-width: 95%;
+    }
     .detail-row-1{
         grid-template-columns:auto;
     }
