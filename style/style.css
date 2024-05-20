@@ -103,7 +103,7 @@ header{
     font-weight: bold;
 }
 .principal-header .navbar ul li a:hover{
-    background-color: rgb(203, 202, 202)
+    background-color: rgb(203, 202, 202);
 } 
 
 .checkbtn{
@@ -119,6 +119,39 @@ header{
 #check{
     display: none;
 }
+/* Configuracion de navegacion vertical */
+.list-destiny {
+    position: relative;
+}
+.ul-second {
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    color: white;
+}
+.navbar .option-destiny a{
+    color: black;
+}
+.navbar .option-destiny a:hover{
+    display:contents;
+    font-size: 20px;
+    transition: .5s;
+}
+.ul-second > .option-destiny {
+    width: 150px;
+    line-height: 50px;
+    transform: translateX(0px);
+    border-bottom:solid 1px #fff ;
+    text-align: center;
+    background-color: rgb(203, 202, 202);
+}
+.ul-second > .option-destiny:hover {
+    background-color: rgba(17, 151, 172, 0.856);
+}
+.list-destiny:hover > .ul-second {
+    display: block;
+}
+
 /* Configuración de Main */
 /* Configuración de Banner */
 
@@ -521,8 +554,8 @@ iframe{
 }
 .cerrar-modal{
     width:100%;
-    height: 100vh;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     top:0; left: 0;
     z-index: -1;
 }
@@ -708,6 +741,184 @@ footer{
     line-height: 50px;
 }
 
+/* PAGINA ACERCA DE NOSOTROS */
+main .section-about-us{
+    margin-top: 120px;
+    padding: 1px 0;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+.tittle-about-us{
+    text-align: center;
+    background-color:#bee1e7;
+    color: #1198ac;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 160px;
+}
+.container-about-us h2{
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: -0.6px;
+}
+.info-about-us{
+    /* justify-content: space-around; */
+    margin: 20px auto;
+    margin-bottom: 40px;
+    /* border: 1px solid black; */
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.info-about-us img{
+    height: 305px;
+    /* width: 220px; */
+    /* background-color: black; */
+    box-shadow: 1px 1px 5px grey;
+    /* border: 1px solid black; */
+    border-radius: 10% 0 10% 0;
+    margin: auto 10px;
+}
+.info-about-us p{
+    text-align: justify;
+    line-height: 35px;
+    /* justify-content: center; */
+    font-size: 20px;
+    margin: auto 10px;
+}
+.info-about-us p strong{
+    font-size: 24px;
+}
+
+/* PAGINA DESTINOS */
+/* Sección Destinos*/
+.section-destiny{
+    margin-top: 120px;
+    padding-top: 1px;
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+}
+.tittle-destiny{
+    height: auto;
+    width: 220px;
+    margin: 40px auto 20px auto;
+    padding: 10px 15px;
+    text-align: center;
+    /* border: 1px solid black; */
+    background-color:#bee1e7;
+    color: #1198ac;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.container-destiny{
+    width: 90%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+}
+.container-destiny h2{
+     text-align: center;
+     font-size: 48px;
+     letter-spacing: -0.6px;
+}
+.cards-destiny{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: 20px auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns:auto auto auto auto; */
+    /* text-align: justify; */
+}
+.card-destiny{
+    height: auto;
+    background-color: rgba(17, 151, 172, 0.856);
+    box-shadow: 0 0 5px gray;
+    border-radius: 20px;
+    margin: 10px 5px;
+    /* cursor: pointer; */
+    display: block;
+}
+.card-destiny img{
+    height: 210px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.card-destiny:hover{
+    transition: .5s;
+    scale: 1.02;
+}
+.card-destiny-content{
+    display: inline-grid;
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+    bottom: 20px;
+}
+.destiny{
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 8px 15px;
+}
+.destiny-ubication, .destiny-price{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.destiny-ubication i, .destiny-price i{
+    color: #F6E127;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.destiny-ubication i:hover, .destiny-price i:hover{
+    color: #F6E127;
+    background-color: transparent;
+    scale: none;
+}
+.card-destiny-content a{
+    /* .boton-modal, --En caso de usar otra opcion de modal usar el boton <label> */
+    text-align: center;
+    margin: 10px auto 20px auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: #ED2A79;
+    cursor: pointer;
+    /* colores: Rosado:#ED2A79 Verde:#3ABA8F Amarillo:#F6E127 Azul:#06809F*/
+}
+.card-destiny-content a:hover{
+    /* .boton-modal:hover, --En caso de usar otra opcion de modal usar el boton <label> */
+    background-color: #F6E127;
+    color: #06809F;
+}
+.card-destiny-content a i{
+    /* .boton-modal i, --En caso de usar otra opcion de modal usar el boton <label> */
+    margin-right: 5px;
+}
+.card-destiny-content a i:hover{
+    /* .boton-modal i:hover, --En caso de usar otra opcion de modal usar el boton <label> */
+    color: #06809F;
+    background-color: transparent;
+    scale: none;
+}
 /* Configuracion Responsive */
 @media (min-width:1200px){
     
@@ -720,7 +931,17 @@ footer{
     } */
 }
 @media (min-width:992px) and (max-width: 1199px){
-
+    /* Pagina Acerca de nosotros */
+    .info-about-us p{
+        line-height: 30px;
+    }
+    .info-about-us p strong{
+        font-size: 22px;
+    }
+    /* Ajustar cards de Destinos */
+    .cards-destiny{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (min-width:768px) and (max-width: 991px) {
@@ -749,6 +970,20 @@ footer{
     }
     .detail-tour, .detail-important{
         font-size: 14px;
+    }
+    /* Pagina Acerca de nosotros */
+    .info-about-us{
+        width: 95%;
+    }
+    .info-about-us p{
+        line-height: 28px;
+    }
+    .info-about-us p strong{
+        font-size: 20px;
+    }
+    /* Ajustar cards de Destinos */
+    .cards-destiny{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -821,6 +1056,28 @@ footer{
     }
     .detail-include .include{
         margin-bottom: 10px;
+    }
+    /* Pagina Acerca de nosotros */
+    .info-about-us{
+        width: 97%;
+        grid-template-columns: auto;
+    }
+    .info-about-us img{
+        height: 250px;
+        margin: 10px auto;
+    }
+    .info-about-us p{
+        line-height: 26px;
+    }
+    .info-about-us p strong{
+        font-size: 20px;
+    }
+    /* Ajustar cards de Destinos */
+    .container-destiny{
+        width: 98%;
+    }
+    .cards-destiny{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 575px) {
@@ -895,5 +1152,27 @@ footer{
     }
     .detail-include .include{
         margin-bottom: 10px;
+    }
+    /* Pagina Acerca de nosotros */
+    .info-about-us{
+        width: 97%;
+        grid-template-columns: auto;
+    }
+    .info-about-us img{
+        height: 250px;
+        margin: 10px auto;
+    }
+    .info-about-us p{
+        line-height: 26px;
+    }
+    .info-about-us p strong{
+        font-size: 20px;
+    }
+    /* Ajustar cards de Destinos */
+    .container-destiny{
+        width: 98%;
+    }
+    .cards-destiny{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
