@@ -1059,6 +1059,10 @@ main .section-about-us{
    height: 100%;
 }
 /* detalles de cada tour */
+.bg-style{
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+}
 .tour-details{
     width: 80%;
     height: auto;
@@ -1544,6 +1548,10 @@ main .section-about-us{
         margin: 0 auto;
     }
      /* Pagina de cada destino */
+    .bg-style{
+        background-size: cover; 
+        background-attachment: fixed;
+    }
     .tour-details{
         width: 95%;
     }
